@@ -1,6 +1,6 @@
 # phpTiny-MVC
 
-This is a small MVC project that I have been working on.
+This is a small MVC project in PHP that I have been working on.
 It uses Eloquent as its ORM and Twig as its templating engine. Both are very well documented.
 
 ### Prerequisites
