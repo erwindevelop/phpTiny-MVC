@@ -1,0 +1,21 @@
+        <header>
+            <h1><a href="/">Andrew S Erwin | Freelance web and application developer</a></h1>
+            <div id="togglebutton">
+                <div class="buttonline"></div>
+                <div class="buttonline"></div>
+                <div class="buttonline"></div>
+            </div>
+            <div id="menu">
+                <div id="menu-brand">
+                    <div class="logo"></div>
+                </div>
+                <ul id="menu-nav">
+                    <li class="menu-nav-item"><a class="menu-nav-link {% if pageTitle == 'home' %}current{% endif %}" href="/">home</a>
+                    <li class="menu-nav-item"><a class="menu-nav-link {% if pageTitle == 'about' %}current{% endif %}" href="/about">about</a>
+                    <li class="menu-nav-item"><a class="menu-nav-link {% if pageTitle == 'services' %}current{% endif %}" href="#">services</a>
+                    <li class="menu-nav-item"><a class="menu-nav-link {% if pageTitle == 'projects' %}current{% endif %}" href="#">projects</a>
+                    <li class="menu-nav-item"><a class="menu-nav-link {% if pageTitle == 'blog' %}current{% endif %}" href="/blog">blog</a>
+                    <li class="menu-nav-item"><a class="menu-nav-link {% if pageTitle == 'contact' %}current{% endif %}" href="#">contact</a>
+                </ul>
+            </div>
+        </header>

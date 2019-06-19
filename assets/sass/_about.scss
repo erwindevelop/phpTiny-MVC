@@ -1,0 +1,34 @@
+#about
+{
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: 'bioimage bio bio' 'box1 box2 box3';
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 10vh;
+
+  #portrait-wrapper
+  {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .bio
+  {
+    grid-area: bio;
+  }
+
+  .box1
+  {
+    grid-area: box1;
+  }
+
+  .box2
+  {
+    grid-area: box2;
+  }
+
+  .box3
+  {
+    grid-area: box3;
+  }
+}

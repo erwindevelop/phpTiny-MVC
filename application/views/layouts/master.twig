@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#122538" /> 
+
+        <title>Erwin Interactive | {{ pageTitle }}</title>
+
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+        <link rel="stylesheet" href="/css/styles.css">
+    </head>
+    <body id="main" {% if pageTitle == 'home' %}class="homebg"{% endif %}>
+        {% include "partials/header.twig" %}
+        <main>
+            {% block content %}
+            {% endblock %}
+        </main>
+        {% if hideFooter != true %} 
+            {% include "partials/footer.twig" %}
+        {% endif %}
+        <script src="/js/main.js"></script>
+    </body>
+</html>

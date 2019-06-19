@@ -1,0 +1,11 @@
+{% set pageTitle, hideFooter = 'blog', true %}
+{% extends "layouts/master.twig" %}
+
+{% block content %} 
+            <div id="blog">
+                {% for category in categories %}
+                    {{ category.name }}
+                {% endfor %}
+            </div>
+
+{% endblock %}

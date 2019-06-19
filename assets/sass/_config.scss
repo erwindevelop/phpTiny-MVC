@@ -1,0 +1,22 @@
+@import         url('https://use.fontawesome.com/releases/v5.6.3/css/all.css');
+
+$bgimage:       url('../images/code.jpg');
+$banner:        url('../images/EI_banner300.png');
+$banner_noicon: url('../images/EI_banner_no_icon300.png');
+$logo:          url('../images/EI_logo_250x250.png');
+$logo_sm:       url('../images/EI_logo_60x60.png');
+$portrait:      url('../images/andrew_portrait.jpg');
+$portrait_sm:   url('../images/andrew_portrait_sm.jpg');
+$bgopacity:     0.9;
+
+$primarybg:     #122538;
+$darkblue:      #0076c3;
+$lightblue:     #009adc;
+$text:          #949596;
+$teal:          #4dc0b5;
+$cyan:          #6cb2eb;
+
+@mixin easeout
+{
+    transition: all .5s ease-out;
+}

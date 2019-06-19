@@ -1,0 +1,223 @@
+@import 'config';
+@import 'menu';
+@import 'home';
+@import 'about';
+@import 'blog';
+
+*
+{
+  box-sizing: border-box;
+  font-family: 'DejaVu Sans', sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+body
+{
+  background-color: $primarybg;
+  height: 100%;
+  line-height: 1.5;
+}
+
+a
+{
+  color: $text;
+  text-decoration: none;
+}
+
+h2, h3, h4
+{
+  font-weight: 400;
+}
+
+h1
+{
+  a
+  {
+    background-image: $banner;
+    height: 41px;
+    left: 1rem;
+    position: absolute;
+    text-indent: -5000px;
+    top: 1rem;
+    width: 300px;
+  }
+}
+
+h2
+{
+  color: $text;
+  font-size: 2rem;
+  margin-top: 5vh;
+
+  span
+  {
+    color: $lightblue;
+  }
+}
+
+h3
+{
+  background: rgba(darken($primarybg, 5), .5);
+  color: #999;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  padding: .25rem 1rem .25rem .2rem;
+}
+
+h4
+{
+  color: $lightblue;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+p
+{
+  color: $text;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+header
+{
+  background-color: $primarybg;
+  height: 70px;
+  position: fixed;
+  width: 100%;
+  z-index: 4;
+
+  #togglebutton
+  {
+    @include easeout;
+    border-radius: 25%;
+    cursor: pointer;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    z-index: 3;
+
+    .buttonline
+    {
+      @include easeout;
+      background-color: white;
+      height: 3px;
+      margin: 0 0 5px 0;
+      width: 28px;
+    }
+
+    &.close
+    {
+      transform: rotate(180deg);
+
+      .buttonline
+      {
+        &:nth-child(1)
+        {
+          transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        &:nth-child(2)
+        {
+          opacity: 0;
+        }
+
+        &:nth-child(3)
+        {
+          transform: rotate(-45deg) translate(7px, -6px);
+        }
+      }
+    }
+  }
+}
+
+main
+{
+  min-height: calc(100vh - 60px);
+  padding: 4rem 1rem;
+}
+
+#icons
+{
+  margin-top: 1rem;
+
+  a
+  {
+    padding: .5rem;
+
+    &:hover
+    {
+      @include easeout();
+
+      color: $lightblue;
+    }
+  }
+}
+
+footer
+{
+  background-color: darken($primarybg, 10);
+  bottom: 0px;
+  color: $text;
+  height: 60px;
+  left: 0px;
+  padding: 1rem;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+}
+
+.homebg
+{
+  background-attachment: fixed;
+  background-image: $bgimage;
+  background-size: cover;
+
+  header
+  {
+    height: 0;
+  }
+
+  &:after
+  {
+      background-color: rgba($primarybg, .75);
+      content: '';
+      height: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+      z-index: -1;
+  }
+}
+
+.logo
+{
+  background-image: $logo;
+  height: 250px;
+  margin: auto;
+  width: 250px;
+}
+
+.portrait
+{
+    background-image: $portrait;
+    border: solid 3px $darkblue;
+    border-radius: 50%;
+    height: 250px;
+    margin: auto;
+    opacity: 1.0;
+    width: 250px;
+}
+
+.box
+{
+  background-color: lighten($primarybg, 5);
+  border-bottom: $lightblue 5px solid;
+  margin-bottom: 10px;
+  padding: .5rem;
+}
+
+@import 'mobile';

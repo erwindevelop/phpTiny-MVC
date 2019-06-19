@@ -1,0 +1,11 @@
+{% set pageTitle, hideFooter = '404', true %}
+{% extends "layouts/master.twig" %}
+
+{% block content %} 
+            <div id="error">
+                <h2>Ooops! Something went wrong</h2>
+                <p>
+                    The page or resource you are looking for ({{ resource }}) doesn't seem to be here!
+                </p>
+            </div>
+{% endblock %}

@@ -1,0 +1,92 @@
+#menu
+{
+    position: fixed;
+    top: 0;
+    visibility: hidden;
+    width: 100%;
+
+    &.show
+    {
+        visibility: visible;
+    }
+
+    &-brand, &-nav
+    {
+        align-items: center;
+        display: flex;
+        flex-flow: column wrap;
+        float: left;
+        height: 100vh;
+        justify-content: center;
+        overflow: hidden;
+        width: 50%;
+
+    }
+
+    &-nav
+    {
+        @include easeout;
+        background-color: rgba(darken($primarybg, 5), .8);
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        transform: translate3d(100%, 0, 0);
+
+        &.show
+        {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    &-brand
+    {
+        @include easeout;
+        background-color: rgba($primarybg, .8);
+        transform: translate3d(-100%, 0, 0);
+
+        &.show
+        {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    .menu-nav-item
+    {
+        @include easeout;
+        transform: translate3d(600px, 0, 0);
+
+        &.show
+        {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    .menu-nav-link
+    {
+        @include easeout;
+        display: inline-block;
+        font-size: 2rem;
+        font-weight: 400;
+        padding: 1rem 0;
+        position: relative;
+        text-transform: uppercase;
+
+        &.current
+        {
+            color: $darkblue;
+        }
+
+        &:hover
+        {
+            color: $darkblue;
+        }
+    }
+}
+
+@for $x from 1 through 6
+{
+    .menu-nav-item:nth-child(#{$x})
+    {
+        transition-delay: $x * 0.1s !important;
+    }
+}

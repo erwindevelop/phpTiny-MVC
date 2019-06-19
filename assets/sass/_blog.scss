@@ -1,0 +1,45 @@
+#blog
+{
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas: 'posts posts sidebar';
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 10vh;
+
+    &-posts
+    {
+        grid-area: posts;
+
+        .excerpt
+        {
+            background-color: lighten($primarybg, 5);
+            border-bottom: $lightblue 5px solid;
+            margin-bottom: 15px;
+            padding: .5rem;
+
+            h3
+            {
+                background: none;
+            }
+
+        }
+    }
+
+    &-sidebar
+    {
+        background-color: lighten($primarybg, 5);
+        grid-area: sidebar;
+        margin-bottom: 15px;
+        padding: .5rem;
+
+        #blog-search
+        {
+            margin-top: 20px;
+
+            p
+            {
+                margin-bottom: .25rem;
+            }
+        }
+    }
+}
