@@ -26,7 +26,7 @@ composer install
 All source files (we're using Sass) are in the assets folder. We are using Webpack to compile CSS and JS. Just run
 
 ```
-npm build
+npm run build
 ```
 
 ### Inspiration
